@@ -1,0 +1,226 @@
+/* import fonts from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alef&family=Henny+Penny&family=Kaushan+Script&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./Images/DB1.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Henny Penny', cursive;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: black;
+}
+
+ .wrapper {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 500px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: white;
+    -webkit-box-shadow: 0px, 10px, 50px, rgba(0,0,0,.3);
+    -moz-box-shadow: 0px, 10px, 50px, rgba(0,0,0,.3);
+    box-shadow: 0px, 10px, 50px, rgba(0,0,0,.3);;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.clearfix {
+    clear: both;
+    display: table;
+    content:'';
+}
+
+ .player-0-panel, .player-1-panel {
+    width: 50%;
+    float: left;
+    height: 500px;
+    padding: 20px;
+    background: darkgray;
+    color: beige;
+}
+
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Kaushan Script', cursive;
+    color: #EB4D4D;
+    margin-top: 40px;
+}
+
+.active {
+    background: #f7f7f7;
+}
+
+.active .player-name {
+    color: black;
+}
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 50px;
+    position: absolute;
+    color: #EB4D4D;
+    top: -20px;
+    right: 50px;
+}
+
+.player-current-box {
+    background: #EB4D4D;
+    color: #ffffff;
+    width: 40%;
+    margin-top: 70px;
+    margin-left: 140px;
+    /* margin: 0 auto; */
+    padding: 13px;
+    text-align: center;
+}
+
+.player-current-label{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: 'Alef', sans-serif;
+    color: black;
+}
+
+.player-current-score {
+    font-size: 40px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+button {
+    position: absolute;
+    width: auto;
+    left: 500px;
+    padding-right: 5px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: black;
+    background: #EB4D4D;
+    border-radius: 5px;
+    border-color: black;
+    font-family: 'Alef', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    -webkit-transition: background-color 0.5s ease, color 0.3s ease;
+    -moz-transition: background-color 0.5s ease, color 0.3s ease;
+    -ms-transition: background-color 0.5s ease, color 0.3s ease;
+    -o-transition: background-color 0.5s ease, color 0.3s ease;
+    transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+button:hover {
+    font-weight: 600;
+}
+
+button:focus{
+    outline: none;
+}
+
+i {
+    color: black;
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 10px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: 4px;
+    padding-left: 5px;
+    -webkit-transition: margin 0.3s ease;
+    -moz-transition: margin 0.3s ease;
+    -ms-transition: margin 0.3s ease;
+    -o-transition: margin 0.3s ease;
+    transition: margin 0.3s ease;
+}
+
+.btn-roll {
+    top:300px;
+}
+.btn-hold {
+    top:330px;
+}
+.btn-new {
+    top: 460px;
+}
+
+.dice {
+    position: absolute;
+    left: 500px;
+    top: 50px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 80px;
+    -webkit-box-shadow: 0px 10px 60px rgba(0, 0, 0, .10);
+    -moz-box-shadow: 0px 10px 60px rgba(0, 0, 0, .10);
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, .10);
+}
+
+#dice-1 {
+    top: 90px;
+}
+
+#dice-2 {
+    top:200px;
+}
+
+.final-score {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 396px;
+    color: black;
+    font-size: 18px;
+    font-family: 'Alef', sans-serif;
+    text-align: center;
+    padding: 10px;
+    width: 160px;
+    text-transform: uppercase;
+}
+
+.final-score:focus {
+    outline: none;
+}
+
+.winner {
+    background-color: #f7f7f7;
+}
+
+.winner .player-name {
+    font-weight: 300;
+    color: #EB4D4D;
+}
